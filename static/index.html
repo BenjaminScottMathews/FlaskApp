@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> THE MOVIE DB </title>
+		<link rel="stylesheet" href='./static/assets/css/style.css'>
+		<link rel="preconnect" href="https://fonts.gstatic.com"> 
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+		<script src='./static/assets/js/appJS.js'></script>	
+	</head>
+	<body>
+		<div class="grid-container">
+			<div class = "Header">THE MOVIE DB</div>
+			<div class = "Menu">
+				<div id="vBorder"></div>
+				<div id="tabs"> 
+					<div> <button id="homeBtn" onclick="switchPage('home')" ><span id="leftSpan">Home</span><span id="rightSpan">&xrarr;</span></button> <hr id="hUnderline"></div>
+					<div> <button id="searchBtn" onclick="switchPage()"> <span id="leftSpan">Search</span><span id="rightSpan">&xrarr;</span></button> <hr id="sUnderline"></div>
+				</div>
+			</div>
+			<div id="Trends">
+				<div id="MovieContainer">
+					<h2> Trending Movies </h2>
+					<div class="fadeDiv">
+						<div id="MovieTitle"> Trending Movie </div>
+						<img id="MoviePic" alt="Trending Movie">
+					</div>
+				</div>
+				<div id="TVContainer">
+					<h2> TV Shows On-Air Today </h2>
+					<div class="fadeDiv">
+					<div id="TVTitle"> TV Show On-Air </div>
+					<img id="TVPic" alt="TV Shows On-Air">
+					</div>
+				</div>
+			</div>
+			<div id="Search">
+				<h1>Search</h1>
+				<label class="required" for="Query" id="idLb">Keyword</label>
+				<form>
+					<input type="text" size=40 id="Query" name="Query">
+				</form>
+				<label class="required" for="Category" id="catLb">Category</label>
+				<select name="Category" id="Category">
+					<option name="Default"> </option>
+					<option value="Movies">Movies</option>
+					<option value="TV Shows">TV Shows</option>
+					<option value="Movies and TV Shows">Movies and TV Shows</option>
+				</select>
+				<div id="btnContainer">
+					<button id="searchItemBtn" onclick="search()"> Search </button>
+					<button id="clear" onclick="clearRes()"> Clear </button>
+				</div>
+			</div>
+			<div id="Results"></div>
+			<div id="Footer">
+				Designed and developed by Ben Mathews <br> Powered by TMDB
+			</div>
+			<div id="Modal">
+				<div id="ModalCard">
+					<img id="sourcePoster">
+					<button id="close"> &#10006; </button>
+					<div id="titlePlusInfo">
+						<h2 id="movieTitle"> </h2>
+						<a id="infoBtn" target="_blank"> &#9432; </a>
+					</div>
+					<div id ="yearAndGenres"></div>
+					<div id ="ratingAndVotes"></div>
+					<div id ="overview"> </div>
+					<div id = "languages"></div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
+
